@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+
+
+
 
 public class StartScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] TextMeshProUGUI startButton;
+
+
     void Start()
     {
         
@@ -15,4 +22,7 @@ public class StartScript : MonoBehaviour
     {
         
     }
+
+
+    
 }
