@@ -6,16 +6,22 @@ public class HpScript : MonoBehaviour
 {
     [SerializeField] int PlayerLives = 3;
 
-
-
-    void Start()
+    private void Update()
     {
-        
+        UpdateHearts();
     }
 
- 
-    void Update()
+    void UpdateHearts()
     {
-        
+        PlayerDeath();
     }
+
+    private void PlayerDeath()
+    {
+        if (PlayerLives == 0)
+        {
+            // Player lives reaches 0 we die (use sceneManager)
+        }
+    }
+
 }
