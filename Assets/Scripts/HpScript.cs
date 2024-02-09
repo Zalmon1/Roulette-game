@@ -29,7 +29,7 @@ public class HpScript : MonoBehaviour
     {
         if (PlayerLives == 0)
         {
-            GoToNextScene();
+            sceneScript.GoToNextScene();
         }
     }
 

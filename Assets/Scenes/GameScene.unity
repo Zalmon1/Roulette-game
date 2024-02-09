@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 1265688446}
   - component: {fileID: 1265688445}
   - component: {fileID: 1265688449}
+  - component: {fileID: 1265688450}
   m_Layer: 5
   m_Name: HPUI
   m_TagString: Untagged
@@ -307,6 +308,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerLives: 3
+--- !u!114 &1265688450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1265688444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a200747ba3a17104db5f8c832ac28830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 0
 --- !u!1 &1750039123
 GameObject:
   m_ObjectHideFlags: 0
