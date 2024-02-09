@@ -12,7 +12,9 @@ public class HpScript : MonoBehaviour
 
     private void Start()
     {
-        FindObjectOfType<SceneScript>();
+        sceneScript = FindObjectOfType<SceneScript>();
+
+       
     }
 
     private void Update()
@@ -31,6 +33,12 @@ public class HpScript : MonoBehaviour
         {
             sceneScript.GoToNextScene();
         }
+    }
+
+
+    private void RemoveHealth()
+    {
+       
     }
 
 }
