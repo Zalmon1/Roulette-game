@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 public class HpScript : MonoBehaviour
 {
     [SerializeField] int PlayerLives = 3;
+    
+    SceneScript sceneScript;
+
+
+    private void Start()
+    {
+        FindObjectOfType<SceneScript>();
+    }
 
     private void Update()
     {
@@ -21,7 +29,7 @@ public class HpScript : MonoBehaviour
     {
         if (PlayerLives == 0)
         {
-            // Player lives reaches 0 we die (use SceneLoader)
+            GoToNextScene();
         }
     }
 
