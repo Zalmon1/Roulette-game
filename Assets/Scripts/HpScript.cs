@@ -12,7 +12,9 @@ public class HpScript : MonoBehaviour
 
     private void Start()
     {
-        FindObjectOfType<SceneScript>();
+        sceneScript = FindObjectOfType<SceneScript>();
+
+       
     }
 
     private void Update()
@@ -29,8 +31,14 @@ public class HpScript : MonoBehaviour
     {
         if (PlayerLives == 0)
         {
-            GoToNextScene();
+            sceneScript.GoToNextScene();
         }
+    }
+
+
+    private void RemoveHealth()
+    {
+       
     }
 
 }
