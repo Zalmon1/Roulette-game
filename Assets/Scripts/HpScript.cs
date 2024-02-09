@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HpScript : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class HpScript : MonoBehaviour
     {
         if (PlayerLives == 0)
         {
-            // Player lives reaches 0 we die (use sceneManager)
+            // Player lives reaches 0 we die (use SceneLoader)
         }
     }
 
