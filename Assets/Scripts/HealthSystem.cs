@@ -1,31 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class HealthSystem : MonoBehaviour
 {
     public GameObject[] hearts;
     public int life;
 
+    [SerializeField] Sprite[] healthSprite;
+    SpriteRenderer spriteRenderer;
+
+    int onDamage;
 
     void Update()
-    {
-        if (life < 1)
+{
+        void ShowNextHitSprite()
         {
-            Destroy(hearts[0].gameObject);
-        }
-        else if (life < 2) 
-        {
-            Destroy(hearts[1].gameObject);
-        }
-        else if (life < 3)
-        {
-            Destroy(hearts[2].gameObject);
-        }
-    }
+            int spriteIndex = onDamage - 1;
+            spriteRenderer.sprite = healthSprite spriteIndex];
 
-    public void OnConnectedToServer(int d)
-    {
-        life -= d;
-    }
+            if (healthSprite[spriteIndex] != null)
+            {
+                spriteRenderer.sprite = healthSprite[spriteIndex];
+            }
+            else
+            {
+                Debug.LogError("Block sprite is missing from array " + gameObject.name);
+            }
+
+        }
 }
