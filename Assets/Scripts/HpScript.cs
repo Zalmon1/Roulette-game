@@ -20,6 +20,7 @@ public class HpScript : MonoBehaviour
     private void Update()
     {
         UpdateHearts();
+        RemoveHealth();
     }
 
     void UpdateHearts()
