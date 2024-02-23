@@ -14,15 +14,15 @@ public class HealthSystem : MonoBehaviour
     int onDamage = 1;
     int timesHit;
 
-    private void Start()
+    void Update()
     {
-        
+        HandleHit();
+        ShowNextHealthSprite();
     }
 
 
-    void Update() 
-    {
-        void HandleHit()
+
+    void HandleHit()
         {
             timesHit++;
             int maxHits = healthSprite.Length + 1;
@@ -51,5 +51,5 @@ public class HealthSystem : MonoBehaviour
             }
 
         }
-    }
+    
 }
