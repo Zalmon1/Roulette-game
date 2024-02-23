@@ -5,7 +5,6 @@ using UnityEngine.UIElements;
 
 public class HealthSystem : MonoBehaviour
 {
-    public GameObject[] hearts;
     public int life = 3;
 
     [SerializeField] Sprite[] healthSprite;
