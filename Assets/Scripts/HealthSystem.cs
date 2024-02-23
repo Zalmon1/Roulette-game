@@ -6,19 +6,40 @@ using UnityEngine.UIElements;
 public class HealthSystem : MonoBehaviour
 {
     public GameObject[] hearts;
-    public int life;
+    public int life = 3;
 
     [SerializeField] Sprite[] healthSprite;
     SpriteRenderer spriteRenderer;
 
-    int onDamage;
+    int onDamage = 1;
+    int timesHit;
 
-    void Update()
-{
-        void ShowNextHitSprite()
+    private void Start()
+    {
+        
+    }
+
+
+    void Update() 
+    {
+        void HandleHit()
         {
-            int spriteIndex = onDamage - 1;
-            spriteRenderer.sprite = healthSprite spriteIndex];
+            timesHit++;
+            int maxHits = healthSprite.Length + 1;
+
+            if (timesHit >= maxHits)
+            {
+                ShowNextHealthSprite();
+            }
+        }
+
+
+
+
+        void ShowNextHealthSprite()
+        {
+            int spriteIndex = life - onDamage;
+            spriteRenderer.sprite = healthSprite[spriteIndex];
 
             if (healthSprite[spriteIndex] != null)
             {
@@ -30,4 +51,5 @@ public class HealthSystem : MonoBehaviour
             }
 
         }
+    }
 }
