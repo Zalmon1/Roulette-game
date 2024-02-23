@@ -5,18 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneScript : MonoBehaviour
 {
-    public string sceneName;
+    public int sceneNum;
 
     public void GoToNextScene()
     {
-        SceneManager.LoadScene(sceneName);
-    }
-
-
-
-    public void ResetGame()
-    {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(sceneNum);
     }
 
 }
