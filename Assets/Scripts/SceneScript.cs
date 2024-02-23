@@ -7,8 +7,6 @@ public class SceneScript : MonoBehaviour
 {
     public string sceneName;
 
-    public int sceneNum;
-
     public void GoToNextScene()
     {
         SceneManager.LoadScene(sceneName);
