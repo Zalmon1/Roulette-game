@@ -13,24 +13,31 @@ public class CardScript : MonoBehaviour
 
     private void Update()
     {
-        Randomize();
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            Randomize();
+        }
     }
 
-    void Randomize()
+    public void Randomize()
     {
         int luck = Random.Range(1, 100);
 
-
         if (chance >= luck)
         {
-            // Succes
+            // You get the card
+
 
         }
         else
-        { 
-            // Fail
+        {
+            // You dont get the card
 
         }
+    }
+
+    void Cards()
+    {
 
     }
 }
