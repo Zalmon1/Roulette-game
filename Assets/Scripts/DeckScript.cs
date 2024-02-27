@@ -22,20 +22,7 @@ public class DeckScript : ScriptableObject
             ShuffledDeck.Add(Instantiate(card));
         }
      
-        int luck = UnityEngine.Random.Range(1, 100);
-
-        if (chance >= luck)
-        {
-            // You get the card
 
 
-        }
-        else
-        {
-            // You dont get the card
-
-        }
     }
-
-    
 }
