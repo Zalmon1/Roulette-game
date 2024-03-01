@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43832c1fb048e1a4c9ced406df341b79, type: 3}
   m_Name: channel
   m_EditorClassIdentifier: 
-  Value: 0
+  Damage: -1

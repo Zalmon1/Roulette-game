@@ -15,7 +15,6 @@ public class SamuelRouletteScript : MonoBehaviour
 
    [SerializeField] bool YourTurn = true;
 
-    // Start is called before the first frame update
     void Start()
     {
         EnemyHealth = 3;
