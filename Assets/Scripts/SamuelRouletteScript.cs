@@ -11,37 +11,46 @@ public class SamuelRouletteScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        EnemyHealth = 3;
+        PlayerHealth = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
-    public void RandomShoot()
-    { 
-       if( Random.Range(0f, 1f) == 0)
-        {
-
-        }
-       else
-        {
-
-        }
-
-       
-    }
-
-    public void TakeEnemyHealth()
+    public void RandomPlayerShoot()
     {
+        if (Random.Range(0f, 5f) == 0)
+        {
+            EnemyHealth--;
+        }
+        else
+        {
+            return;
+        }
+
+
+
+
 
     }
-
-    public void TakePlayerHealth()
+    public void RandomEnemyShoot()
     {
+        if (Random.Range(0f, 5f) == 0)
+        {
+            PlayerHealth--;
+        }
+        else
+        {
+            return;
+        }
+
 
     }
+   
+
 }
