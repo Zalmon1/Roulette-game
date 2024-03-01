@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Threading;
 
 public class SamuelRouletteScript : MonoBehaviour
 {
@@ -26,8 +27,10 @@ public class SamuelRouletteScript : MonoBehaviour
     {
         if (Random.Range(0f, 5f) == 0)
         {
-            EnemyHealth--
+            Thread.Sleep(20000);
+            EnemyHealth--;
             
+
         }
         else
         {

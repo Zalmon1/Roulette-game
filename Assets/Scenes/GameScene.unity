@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 160813483}
   - component: {fileID: 160813484}
   - component: {fileID: 160813482}
+  - component: {fileID: 160813485}
   m_Layer: 5
   m_Name: ShootButton
   m_TagString: Untagged
@@ -206,13 +207,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 160813485}
+        m_TargetAssemblyTypeName: SamuelRouletteScript, Assembly-CSharp
+        m_MethodName: RandomPlayerShoot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -256,6 +257,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160813480}
   m_CullTransparentMesh: 1
+--- !u!114 &160813485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160813480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0846d3cefa90c744816fd601a44481b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Healthsprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  PlayerHealth: 3
+  EnemyHealth: 3
 --- !u!1 &226120462
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +361,6 @@ GameObject:
   - component: {fileID: 309876867}
   - component: {fileID: 309876870}
   - component: {fileID: 309876869}
-  - component: {fileID: 309876868}
   m_Layer: 5
   m_Name: EnemyHealth
   m_TagString: Untagged
@@ -369,27 +387,6 @@ RectTransform:
   m_AnchoredPosition: {x: -1800, y: -143.7522}
   m_SizeDelta: {x: 80, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &309876868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309876866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bf7777ba34e02a4e82a85e75e039d93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 3
-  healthSprite:
-  - {fileID: -1275630047, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
-  - {fileID: 393477158, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
-  - {fileID: 1982356713, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
-  - {fileID: -93865004, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
-  spriteRenderer: {fileID: 0}
-  onDamage: 1
-  timesHit: 0
 --- !u!114 &309876869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -439,6 +436,7 @@ GameObject:
   - component: {fileID: 438821342}
   - component: {fileID: 438821344}
   - component: {fileID: 438821343}
+  - component: {fileID: 438821345}
   m_Layer: 5
   m_Name: Card3
   m_TagString: Untagged
