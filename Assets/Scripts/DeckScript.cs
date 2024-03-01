@@ -12,8 +12,6 @@ public class DeckScript : ScriptableObject
     public List<CardScript> Deck = new List<CardScript>();
     public List<CardScript> ShuffledDeck;
 
-    [SerializeField] int chance = 50;
-
     public void Randomize()
     {
         ShuffledDeck = new List<CardScript>();

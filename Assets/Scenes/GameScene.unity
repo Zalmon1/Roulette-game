@@ -275,6 +275,8 @@ MonoBehaviour:
   - {fileID: 0}
   PlayerHealth: 3
   EnemyHealth: 3
+  PlayerHeart: {fileID: 0}
+  EnemyHeart: {fileID: 0}
 --- !u!1 &226120462
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +438,7 @@ GameObject:
   - component: {fileID: 309876867}
   - component: {fileID: 309876870}
   - component: {fileID: 309876869}
+  - component: {fileID: 309876871}
   m_Layer: 5
   m_Name: EnemyHealth
   m_TagString: Untagged
@@ -462,6 +465,24 @@ RectTransform:
   m_AnchoredPosition: {x: -1800, y: -143.7522}
   m_SizeDelta: {x: 80, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &309876868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309876866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf7777ba34e02a4e82a85e75e039d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 3
+  healthSprite:
+  - {fileID: -1275630047, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
+  - {fileID: 393477158, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
+  - {fileID: 1982356713, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
+  - {fileID: -93865004, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
 --- !u!114 &309876869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,6 +832,7 @@ GameObject:
   - component: {fileID: 898640297}
   - component: {fileID: 898640300}
   - component: {fileID: 898640299}
+  - component: {fileID: 898640301}
   m_Layer: 5
   m_Name: PlayerHealth
   m_TagString: Untagged
@@ -837,6 +859,24 @@ RectTransform:
   m_AnchoredPosition: {x: -126.25391, y: -143.7522}
   m_SizeDelta: {x: 80, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &898640298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898640296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf7777ba34e02a4e82a85e75e039d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 3
+  healthSprite:
+  - {fileID: -1275630047, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
+  - {fileID: 393477158, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
+  - {fileID: 1982356713, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
+  - {fileID: -93865004, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
 --- !u!114 &898640299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -875,6 +915,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898640296}
   m_CullTransparentMesh: 1
+--- !u!114 &898640301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898640296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0846d3cefa90c744816fd601a44481b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Healthsprites:
+  - {fileID: -1275630047, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
+  - {fileID: 393477158, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
+  - {fileID: 1982356713, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
+  - {fileID: -93865004, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
+  PlayerHealth: 0
+  EnemyHealth: 0
+  PlayerHeart: {fileID: 0}
+  EnemyHeart: {fileID: 0}
 --- !u!1 &928088340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,7 +1092,7 @@ GameObject:
   - component: {fileID: 1265688446}
   - component: {fileID: 1265688445}
   m_Layer: 5
-  m_Name: HPUI
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
