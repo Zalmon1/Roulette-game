@@ -6,6 +6,7 @@ public class DeckShuffler : MonoBehaviour
 {
     private void Update()
     {
-        
+        FindAnyObjectByType<DeckScript>().
+        Randomize();
     }
 }
