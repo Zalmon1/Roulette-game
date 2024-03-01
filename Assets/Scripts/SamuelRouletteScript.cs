@@ -9,16 +9,17 @@ public class SamuelRouletteScript : MonoBehaviour
     [SerializeField] Sprite[] Healthsprites;
     [SerializeField] int PlayerHealth;
     [SerializeField] int EnemyHealth;
-    [SerializeField] Image PlayerHeart = null;
-    [SerializeField] Image EnemyHeart = null;
+    [SerializeField] Image PlayerHeart;
+    [SerializeField] Image EnemyHeart;
 
 
    [SerializeField] bool YourTurn = true;
 
     void Start()
     {
-        EnemyHealth = 3;
-        PlayerHealth = 3;
+        EnemyHealth = 10;
+        PlayerHealth = 10;
+
       
     }
 
@@ -34,7 +35,7 @@ public class SamuelRouletteScript : MonoBehaviour
     {
        
 
-        if (Random.Range(0f, 5f) >= 1 && YourTurn == true)
+        if (Random.Range(0f, 5f) <= 1 && YourTurn == true)
         {
             EnemyHealth--;
             
@@ -55,15 +56,17 @@ public class SamuelRouletteScript : MonoBehaviour
     }
     public void RandomEnemyShoot()
     {
+
+
         float randomNumber = Random.Range(0f, 5f);
         //Debug.Log(randomNumber);
-        if (randomNumber >= 1 && YourTurn == false)
+        if (randomNumber <= 1 && YourTurn == false)
         {
             PlayerHealth--;
             YourTurn = true;
            Debug.Log("The enemy hit you");
         }
-        else if(randomNumber <= 2 && YourTurn == false)
+        else if(randomNumber >= 2 && YourTurn == false)
         {
             YourTurn = true;
             Debug.Log("The enemy missed you");
