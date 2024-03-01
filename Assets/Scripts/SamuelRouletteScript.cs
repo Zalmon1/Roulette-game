@@ -9,34 +9,43 @@ public class SamuelRouletteScript : MonoBehaviour
     [SerializeField] Sprite[] Healthsprites;
     [SerializeField] int PlayerHealth;
     [SerializeField] int EnemyHealth;
-    [SerializeField] Image PlayerHeart = null;
-    [SerializeField] Image EnemyHeart = null;
+    [SerializeField] Image PlayerHeart;
+    [SerializeField] Image EnemyHeart;
 
 
-    bool YourTurn = true;
+   [SerializeField] bool YourTurn = true;
 
     void Start()
     {
-        EnemyHealth = 3;
-        PlayerHealth = 3;
+        EnemyHealth = 10;
+        PlayerHealth = 10;
+
       
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        RandomEnemyShoot();
+    }
+
 
 
     public void RandomPlayerShoot()
     {
        
 
-        if (Random.Range(0f, 5f) == 0 && YourTurn == true)
+        if (Random.Range(0f, 5f) <= 1 && YourTurn == true)
         {
-            Thread.Sleep(20000);
             EnemyHealth--;
             
             YourTurn = false;
+            Debug.Log("You hit the enemy");
         }
         else
         {
             YourTurn = false;
+            Debug.Log("You didn't hit the enemy");
             return;
         }
 
@@ -47,15 +56,20 @@ public class SamuelRouletteScript : MonoBehaviour
     }
     public void RandomEnemyShoot()
     {
-        if (Random.Range(0f, 5f) == 0 && YourTurn == false)
+
+
+        float randomNumber = Random.Range(0f, 5f);
+        //Debug.Log(randomNumber);
+        if (randomNumber <= 1 && YourTurn == false)
         {
             PlayerHealth--;
             YourTurn = true;
-
+           Debug.Log("The enemy hit you");
         }
-        else
+        else if(randomNumber >= 2 && YourTurn == false)
         {
             YourTurn = true;
+            Debug.Log("The enemy missed you");
             return;
         }
 
