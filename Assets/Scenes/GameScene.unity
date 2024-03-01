@@ -387,9 +387,6 @@ MonoBehaviour:
   - {fileID: 393477158, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
   - {fileID: 1982356713, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
   - {fileID: -93865004, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
-  spriteRenderer: {fileID: 0}
-  onDamage: 1
-  timesHit: 0
 --- !u!114 &309876869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,21 +500,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438821341}
   m_CullTransparentMesh: 1
---- !u!114 &438821345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438821341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e1df5f2f2ad33a488569b8964885d91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Deck: []
-  ShuffledDeck: []
-  chance: 50
 --- !u!1 &725977343
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,9 +631,6 @@ MonoBehaviour:
   - {fileID: 393477158, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
   - {fileID: 1982356713, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
   - {fileID: -93865004, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
-  spriteRenderer: {fileID: 0}
-  onDamage: 1
-  timesHit: 0
 --- !u!114 &898640299
 MonoBehaviour:
   m_ObjectHideFlags: 0

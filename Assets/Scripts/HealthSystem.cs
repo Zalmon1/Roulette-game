@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class HealthSystem : MonoBehaviour
 {
     public int life = 3;
+    public DeckScript myDeck = null;
 
     [SerializeField] Sprite[] healthSprite;
     SpriteRenderer spriteRenderer;
@@ -17,6 +18,7 @@ public class HealthSystem : MonoBehaviour
     {
         HandleHit();
         ShowNextHealthSprite();
+    
     }
 
 
