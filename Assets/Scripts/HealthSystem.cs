@@ -46,7 +46,7 @@ public class HealthSystem : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Block sprite is missing from array " + gameObject.name);
+                Debug.LogError("Health sprite is missing from array " + gameObject.name);
             }
 
         }

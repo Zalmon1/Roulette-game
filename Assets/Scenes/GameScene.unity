@@ -436,7 +436,6 @@ GameObject:
   - component: {fileID: 438821342}
   - component: {fileID: 438821344}
   - component: {fileID: 438821343}
-  - component: {fileID: 438821345}
   m_Layer: 5
   m_Name: Card3
   m_TagString: Untagged
@@ -501,19 +500,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438821341}
   m_CullTransparentMesh: 1
---- !u!114 &438821345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438821341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e1df5f2f2ad33a488569b8964885d91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chance: 50
 --- !u!1 &725977343
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,7 +861,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 233de5aa9db1bc14ab9835bfa605114a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerLives: 3
 --- !u!114 &1265688450
 MonoBehaviour:
   m_ObjectHideFlags: 0
