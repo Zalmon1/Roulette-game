@@ -20,6 +20,7 @@ public class SamuelRouletteScript : MonoBehaviour
     {
         EnemyHealth = 3;
         PlayerHealth = 3;
+      
     }
 
     // Update is called once per frame
@@ -38,6 +39,7 @@ public class SamuelRouletteScript : MonoBehaviour
         {
             Thread.Sleep(20000);
             EnemyHealth--;
+            
             YourTurn = false;
         }
         else
