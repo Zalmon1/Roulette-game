@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 160813483}
   - component: {fileID: 160813484}
   - component: {fileID: 160813482}
+  - component: {fileID: 160813485}
   m_Layer: 5
   m_Name: ShootButton
   m_TagString: Untagged
@@ -206,13 +207,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 160813485}
+        m_TargetAssemblyTypeName: SamuelRouletteScript, Assembly-CSharp
+        m_MethodName: RandomPlayerShoot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -256,6 +257,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160813480}
   m_CullTransparentMesh: 1
+--- !u!114 &160813485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160813480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0846d3cefa90c744816fd601a44481b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Healthsprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  PlayerHealth: 3
+  EnemyHealth: 3
 --- !u!1 &226120462
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +361,6 @@ GameObject:
   - component: {fileID: 309876867}
   - component: {fileID: 309876870}
   - component: {fileID: 309876869}
-  - component: {fileID: 309876868}
   m_Layer: 5
   m_Name: EnemyHealth
   m_TagString: Untagged
@@ -586,7 +604,6 @@ GameObject:
   - component: {fileID: 898640297}
   - component: {fileID: 898640300}
   - component: {fileID: 898640299}
-  - component: {fileID: 898640298}
   m_Layer: 5
   m_Name: PlayerHealth
   m_TagString: Untagged
@@ -749,8 +766,6 @@ GameObject:
   - component: {fileID: 1265688447}
   - component: {fileID: 1265688446}
   - component: {fileID: 1265688445}
-  - component: {fileID: 1265688449}
-  - component: {fileID: 1265688450}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -851,30 +866,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1265688449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265688444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233de5aa9db1bc14ab9835bfa605114a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1265688450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265688444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a200747ba3a17104db5f8c832ac28830, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1307274856
 GameObject:
   m_ObjectHideFlags: 0
