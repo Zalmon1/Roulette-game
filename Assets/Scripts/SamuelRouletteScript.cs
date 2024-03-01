@@ -15,20 +15,12 @@ public class SamuelRouletteScript : MonoBehaviour
 
     bool YourTurn = true;
 
-    // Start is called before the first frame update
     void Start()
     {
         EnemyHealth = 3;
         PlayerHealth = 3;
       
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
 
 
     public void RandomPlayerShoot()
