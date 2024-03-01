@@ -26,7 +26,8 @@ public class SamuelRouletteScript : MonoBehaviour
     {
         if (Random.Range(0f, 5f) == 0)
         {
-            EnemyHealth--;
+            EnemyHealth--
+            
         }
         else
         {
