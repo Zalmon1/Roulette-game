@@ -184,7 +184,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 0, b: 0, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -269,14 +269,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0846d3cefa90c744816fd601a44481b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Healthsprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  PlayerHealth: 3
-  EnemyHealth: 3
-  PlayerHeart: {fileID: 0}
-  EnemyHeart: {fileID: 0}
+  PlayerHealth: 10
+  EnemyHealth: 10
   YourTurn: 1
 --- !u!1 &226120462
 GameObject:
@@ -814,7 +808,6 @@ GameObject:
   - component: {fileID: 898640297}
   - component: {fileID: 898640300}
   - component: {fileID: 898640299}
-  - component: {fileID: 898640301}
   m_Layer: 5
   m_Name: PlayerHealth
   m_TagString: Untagged
@@ -879,28 +872,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898640296}
   m_CullTransparentMesh: 1
---- !u!114 &898640301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898640296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0846d3cefa90c744816fd601a44481b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Healthsprites:
-  - {fileID: -1275630047, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
-  - {fileID: 393477158, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
-  - {fileID: 1982356713, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
-  - {fileID: -93865004, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
-  PlayerHealth: 3
-  EnemyHealth: 3
-  PlayerHeart: {fileID: 0}
-  EnemyHeart: {fileID: 0}
-  YourTurn: 1
 --- !u!1 &928088340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,7 +1810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.17312765, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

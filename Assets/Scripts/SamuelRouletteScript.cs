@@ -6,11 +6,8 @@ using UnityEngine.UI;
 
 public class SamuelRouletteScript : MonoBehaviour
 {
-    [SerializeField] Sprite[] Healthsprites;
     [SerializeField] int PlayerHealth;
     [SerializeField] int EnemyHealth;
-    [SerializeField] Image PlayerHeart;
-    [SerializeField] Image EnemyHeart;
 
 
    [SerializeField] bool YourTurn = true;
@@ -20,7 +17,7 @@ public class SamuelRouletteScript : MonoBehaviour
         EnemyHealth = 10;
         PlayerHealth = 10;
 
-        StartCoroutine("PlayerDies");
+        
     }
 
     // Update is called once per frame
@@ -29,17 +26,13 @@ public class SamuelRouletteScript : MonoBehaviour
         
     }
 
-
-    IEnumerator PlayerDies()
+    public void RandomShoot()
     {
-        Debug.Log("This is text");
-        yield return new WaitForSeconds(1);
-        Debug.Log("Fade to black");
-        yield return new WaitForSeconds(3);
-        Debug.Log("load new scene");
-       
+        float RandomShot = Random.Range(0f, 5f);
 
     }
+
+
 
 
     public void RandomPlayerShoot()
