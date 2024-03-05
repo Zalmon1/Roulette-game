@@ -20,15 +20,26 @@ public class SamuelRouletteScript : MonoBehaviour
         EnemyHealth = 10;
         PlayerHealth = 10;
 
-      
+        StartCoroutine("PlayerDies");
     }
 
     // Update is called once per frame
     void Update()
     {
-        RandomEnemyShoot();
+        
     }
 
+
+    IEnumerator PlayerDies()
+    {
+        Debug.Log("This is text");
+        yield return new WaitForSeconds(1);
+        Debug.Log("Fade to black");
+        yield return new WaitForSeconds(3);
+        Debug.Log("load new scene");
+       
+
+    }
 
 
     public void RandomPlayerShoot()
@@ -60,13 +71,13 @@ public class SamuelRouletteScript : MonoBehaviour
 
         float randomNumber = Random.Range(0f, 5f);
         //Debug.Log(randomNumber);
-        if (randomNumber <= 1 && YourTurn == false)
+        if (randomNumber < 1 && YourTurn == false)
         {
             PlayerHealth--;
             YourTurn = true;
            Debug.Log("The enemy hit you");
         }
-        else if(randomNumber >= 2 && YourTurn == false)
+        else if(randomNumber > 1 && YourTurn == false)
         {
             YourTurn = true;
             Debug.Log("The enemy missed you");

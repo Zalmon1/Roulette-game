@@ -608,11 +608,11 @@ RectTransform:
   m_LocalScale: {x: 10, y: 5.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 725977344}
+  m_Father: {fileID: 1265688448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -430, y: -506}
+  m_AnchoredPosition: {x: -990, y: -989}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &438821343
@@ -757,10 +757,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1727380072}
-  - {fileID: 1635355688}
-  - {fileID: 438821342}
+  m_Children: []
   m_Father: {fileID: 1265688448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1151,11 +1148,11 @@ RectTransform:
   - {fileID: 725977344}
   - {fileID: 898640297}
   - {fileID: 309876867}
+  - {fileID: 2058633182}
+  - {fileID: 160813481}
   - {fileID: 1727380072}
   - {fileID: 1635355688}
   - {fileID: 438821342}
-  - {fileID: 2058633182}
-  - {fileID: 160813481}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1477,11 +1474,11 @@ RectTransform:
   m_LocalScale: {x: 10, y: 5.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 725977344}
+  m_Father: {fileID: 1265688448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -762, y: -506}
+  m_AnchoredPosition: {x: -1322, y: -989}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1635355689
@@ -1552,11 +1549,11 @@ RectTransform:
   m_LocalScale: {x: 10, y: 5.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 725977344}
+  m_Father: {fileID: 1265688448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1099, y: -506}
+  m_AnchoredPosition: {x: -1659, y: -989}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1727380073
