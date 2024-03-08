@@ -5,8 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "card", menuName = "Deck/Card")]
 public class CardScript : ScriptableObject
 {
-   public int Damage = 0;
-
+    int revive;
+    int helmet;
+    
+    bool doubleDmg;
 
 }
-
