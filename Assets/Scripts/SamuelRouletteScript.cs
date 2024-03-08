@@ -6,11 +6,8 @@ using UnityEngine.UI;
 
 public class SamuelRouletteScript : MonoBehaviour
 {
-    [SerializeField] Sprite[] Healthsprites;
     [SerializeField] int PlayerHealth;
     [SerializeField] int EnemyHealth;
-    [SerializeField] Image PlayerHeart;
-    [SerializeField] Image EnemyHeart;
 
 
    [SerializeField] bool YourTurn = true;
@@ -20,7 +17,7 @@ public class SamuelRouletteScript : MonoBehaviour
         EnemyHealth = 10;
         PlayerHealth = 10;
 
-        StartCoroutine("PlayerDies");
+        
     }
 
     // Update is called once per frame
@@ -28,18 +25,42 @@ public class SamuelRouletteScript : MonoBehaviour
     {
         
     }
-
-
-    IEnumerator PlayerDies()
+ 
+    public void EnemyRandomShoot()
     {
-        Debug.Log("This is text");
-        yield return new WaitForSeconds(1);
-        Debug.Log("Fade to black");
-        yield return new WaitForSeconds(3);
-        Debug.Log("load new scene");
-       
+        float RandomEnemyShot = Random.Range(0f, 5f);
+
+        if (RandomEnemyShot < 0f)
+    }
+
+    public void PlayerRandomShoot()
+    {
+        float RandomShot = Random.Range(0f, 5f);
+
+        if (RandomShot > 1f && YourTurn == true) // check if the value is larger than 1, if its true you don't hit
+        {
+            Debug.Log("You missed the enemy");
+
+            YourTurn = false;
+
+            return;
+        }
+        else if (RandomShot < 1f && YourTurn == true) // else if random is smaller than one, you get to shoot
+        {
+            Debug.Log("You hit the enemy");
+
+            YourTurn = false;
+
+            EnemyHealth--;
+
+            return; 
+        }
 
     }
+
+
+
+
 
 
     public void RandomPlayerShoot()
