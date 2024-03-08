@@ -25,12 +25,40 @@ public class SamuelRouletteScript : MonoBehaviour
     {
         
     }
+ 
+    public void EnemyRandomShoot()
+    {
+        float RandomEnemyShot = Random.Range(0f, 5f);
 
-    public void RandomShoot()
+        if (RandomEnemyShot < 0f)
+    }
+
+    public void PlayerRandomShoot()
     {
         float RandomShot = Random.Range(0f, 5f);
 
+        if (RandomShot > 1f && YourTurn == true) // check if the value is larger than 1, if its true you don't hit
+        {
+            Debug.Log("You missed the enemy");
+
+            YourTurn = false;
+
+            return;
+        }
+        else if (RandomShot < 1f && YourTurn == true) // else if random is smaller than one, you get to shoot
+        {
+            Debug.Log("You hit the enemy");
+
+            YourTurn = false;
+
+            EnemyHealth--;
+
+            return; 
+        }
+
     }
+
+
 
 
 
