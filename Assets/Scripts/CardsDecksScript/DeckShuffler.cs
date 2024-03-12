@@ -22,13 +22,13 @@ public static class ListExtensions
 
 public class DeckShuffler : MonoBehaviour
 {
-    private void Update()
+    public DeckScript myDeck = null;
+    private void Start()
     {
-        FindAnyObjectByType<DeckScript>().
-        Randomize();
-        List<int> list = new List<int>();
-        ListExtensions.Shuffle<int>(list);
+        
+        myDeck.Randomize();
+      
     }
 
-
+        
 }

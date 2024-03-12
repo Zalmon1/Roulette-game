@@ -17,9 +17,9 @@ public class DeckScript : ScriptableObject
         ShuffledDeck = new List<CardScript>();
         foreach (CardScript card in Deck)
         {
-            ShuffledDeck.Add(Instantiate(card));
+            ShuffledDeck.Add(card);
         }
-     
+        ListExtensions.Shuffle<CardScript>(ShuffledDeck);
 
 
     }
