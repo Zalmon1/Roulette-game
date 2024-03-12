@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43832c1fb048e1a4c9ced406df341b79, type: 3}
-  m_Name: Cat Gun
+  m_Name: Extra Health
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: -1

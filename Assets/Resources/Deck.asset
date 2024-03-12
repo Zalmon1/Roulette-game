@@ -20,5 +20,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c49be7666bfb26f48860a5e524b5ef46, type: 2}
   - {fileID: 11400000, guid: c49be7666bfb26f48860a5e524b5ef46, type: 2}
   - {fileID: 11400000, guid: c49be7666bfb26f48860a5e524b5ef46, type: 2}
-  ShuffledDeck: []
-  chance: 50
+  ShuffledDeck:
+  - {fileID: 11400000, guid: c49be7666bfb26f48860a5e524b5ef46, type: 2}
+  - {fileID: 11400000, guid: 2ca405b1f780b2544857036a30e52464, type: 2}
+  - {fileID: 11400000, guid: 1602979e35780d345942ce7f87378be4, type: 2}
+  - {fileID: 11400000, guid: c49be7666bfb26f48860a5e524b5ef46, type: 2}
+  - {fileID: 11400000, guid: c49be7666bfb26f48860a5e524b5ef46, type: 2}
+  - {fileID: 11400000, guid: c49be7666bfb26f48860a5e524b5ef46, type: 2}
+  - {fileID: 11400000, guid: 8ca358e430cdb4d4487548dd240fab9e, type: 2}
