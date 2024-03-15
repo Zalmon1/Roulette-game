@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "card", menuName = "Deck/Card")]
 public class CardScript : ScriptableObject
 {
-    int revive;
-    int helmet;
-    
-    bool doubleDmg;
+    DeckScript Deck;
 
+    bool DoubleDmg;
+
+    int ExtraHealth;
+    int helmet;
+
+    
 }
