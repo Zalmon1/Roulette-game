@@ -207,9 +207,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RoundScript, Assembly-CSharp
-        m_MethodName: Player1Shoot
+      - m_Target: {fileID: 160813485}
+        m_TargetAssemblyTypeName: TestScript, Assembly-CSharp
+        m_MethodName: OnClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -266,13 +266,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 160813480}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55ddf2fa562110b47a6c2d1bb655ab57, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ec827730540e5d499753e8641194796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHealth: 10
-  EnemyHealth: 10
-  Player1turn: 0
-  Player2turn: 0
 --- !u!1 &226120462
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,6 +926,7 @@ GameObject:
   - component: {fileID: 900314322}
   - component: {fileID: 900314321}
   - component: {fileID: 900314320}
+  - component: {fileID: 900314323}
   m_Layer: 5
   m_Name: Player2Shoot
   m_TagString: Untagged
@@ -1001,9 +998,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RoundScript, Assembly-CSharp
-        m_MethodName: Player2Shoot
+      - m_Target: {fileID: 900314323}
+        m_TargetAssemblyTypeName: TestScript, Assembly-CSharp
+        m_MethodName: OnClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1051,6 +1048,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &900314323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900314317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec827730540e5d499753e8641194796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &928088340
 GameObject:
   m_ObjectHideFlags: 0

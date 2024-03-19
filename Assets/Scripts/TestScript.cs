@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.ExceptionServices;
 using UnityEngine;
 
 public class TestScript : MonoBehaviour
@@ -16,8 +17,18 @@ public class TestScript : MonoBehaviour
         
     }
 
-    public void OnClick()
+    public void OnClicked()
     {
+        int chance = Random.Range(1, 6);
+
+        if (chance == 1)
+        {
+            Debug.Log("You hit");
+        }
+        else
+        {
+            Debug.Log("You missed");
+        }
 
     }
 }
