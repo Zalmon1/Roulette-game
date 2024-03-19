@@ -1,17 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "card", menuName = "Deck/Card")]
 public class CardScript : ScriptableObject
 {
-    DeckScript Deck;
+    [SerializeField] DeckScript Deck;
 
-    bool DoubleDmg;
+    [SerializeField] bool doubleDmg;
+    [SerializeField] bool helmet;
 
-    int ExtraHealth;
-    int helmet;
+    [SerializeField] int extraHealth;
+   
+    public bool GetDoubleDamage()
+    {
+        return doubleDmg;
+    }
 
-    
+    public bool GetHelmet() 
+    {
+        return helmet;
+    }
+
+    public int GetExtraHealth() 
+    { 
+        return extraHealth;
+    }
 }
