@@ -41,19 +41,4 @@ public class RoundScript : MonoBehaviour
         }
 
     }
-    public void Player2Shoot()
-    {
-        if (chanceToShoot == 1 && Player1Turn == false)
-        {
-            player2Health--;
-            Debug.Log("Player2 hit");
-            Player1Turn = true;
-        }
-        else if (chanceToShoot != 0 && Player1Turn)
-        {
-            Debug.Log("Player2 missed");
-            Player1Turn = true;
-        }
-
-    }
-}
+ }
