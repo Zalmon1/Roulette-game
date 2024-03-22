@@ -41,7 +41,6 @@ public class RoundScript : MonoBehaviour
 
         chanceToShoot = Random.Range(1, 7);
        
-        EnemyShoot();
 
         if (chanceToShoot >= 5 && friendlyTurn == true)
         {
@@ -57,10 +56,10 @@ public class RoundScript : MonoBehaviour
         }
         else
         {
+            Debug.Log("Not player turn");
             friendlyTurn = false;
             return;
         }
-
 
 
     }
@@ -81,9 +80,9 @@ public class RoundScript : MonoBehaviour
         }
         else
         {
+            Debug.Log("Not enemy turn");
             friendlyTurn = true;
             return;
-            
         }
 
     }

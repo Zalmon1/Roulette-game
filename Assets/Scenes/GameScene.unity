@@ -219,6 +219,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 160813485}
+        m_TargetAssemblyTypeName: RoundScript, Assembly-CSharp
+        m_MethodName: EnemyShoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &160813483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,9 +284,9 @@ MonoBehaviour:
   friendlyTurn: 0
   player1Health: 0
   player2Health: 0
-  chanceToShoot: 0
   emptyclip: {fileID: 8300000, guid: 964745c160757774d96a0d4727955792, type: 3}
   shoot: {fileID: 8300000, guid: b721e20096a049449893100e94400f95, type: 3}
+  chanceToShoot: 0
   arrow: {fileID: 0}
 --- !u!1 &226120462
 GameObject:
@@ -1198,9 +1210,9 @@ MonoBehaviour:
   friendlyTurn: 0
   player1Health: 0
   player2Health: 0
-  chanceToShoot: 0
   emptyclip: {fileID: 0}
   shoot: {fileID: 0}
+  chanceToShoot: 0
   arrow: {fileID: 0}
 --- !u!1 &1307274856
 GameObject:
