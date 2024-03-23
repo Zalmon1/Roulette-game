@@ -35,11 +35,27 @@ public class RoundScript : MonoBehaviour
     {
 
     }
+
+
+
+    public void CheckTurn()
+    {
+        chanceToShoot = Random.Range(1, 7);
+
+        if (friendlyTurn) 
+        {
+            ShootFunction();
+        }
+        else
+        {
+            EnemyShoot();
+        }
+    }
     
     public void ShootFunction()
     {
 
-        chanceToShoot = Random.Range(1, 7);
+        
        
 
         if (chanceToShoot >= 5 && friendlyTurn == true)
@@ -47,6 +63,7 @@ public class RoundScript : MonoBehaviour
             AudioSource.PlayClipAtPoint(shoot, Camera.main.transform.position);
             Debug.Log("player hit");
             friendlyTurn = false;
+            player2Health--;
         }
         else if (friendlyTurn == true)
         {
@@ -71,6 +88,8 @@ public class RoundScript : MonoBehaviour
             AudioSource.PlayClipAtPoint(shoot, Camera.main.transform.position);
             Debug.Log("enemy hit");
             friendlyTurn = true;
+            player1Health--;
+            
         }
         else if (friendlyTurn == false)
         {
