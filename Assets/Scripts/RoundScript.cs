@@ -15,30 +15,36 @@ public class RoundScript : MonoBehaviour
     [SerializeField] AudioClip shoot;
     [SerializeField] int chanceToShoot;
 
+
     public Object arrow;
+    
+    SceneLoader loader;
 
     // Start is called before the first frame update
     void Start()
     {
       
-        player1Health = 20;
-        player2Health = 20;
+        player1Health = 10;
+        player2Health = 10;
 
         friendlyTurn = true;
 
         arrow = GameObject.FindGameObjectWithTag("FriendArrow");
-        
+        loader = gameObject.GetComponent<SceneLoader>();
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() //check if win or lose
     {
+        CheckPlayer1Health();
+        CheckPlayer2Health();
+
 
     }
 
 
 
-    public void CheckTurn()
+    public void CheckTurn() //check whos turn it is to distribute dmg accordingly
     {
         chanceToShoot = Random.Range(1, 7);
 
@@ -52,7 +58,7 @@ public class RoundScript : MonoBehaviour
         }
     }
     
-    public void ShootFunction()
+    public void ShootFunction() //friendlyshoot
     {
 
         
@@ -81,7 +87,7 @@ public class RoundScript : MonoBehaviour
 
     }
 
-    public void EnemyShoot()
+    public void EnemyShoot() //oppshoot
     {
         if (chanceToShoot >= 5 && friendlyTurn == false)
         {
@@ -106,7 +112,29 @@ public class RoundScript : MonoBehaviour
 
     }
 
+    public void CheckPlayer1Health()
+    {
+        if (player1Health <= 0)
+        {
+            loader.Player2Win();
+        }
+        else
+        {
+            return;
+        }
 
+    }
 
+    public void CheckPlayer2Health()
+    {
+        if (player2Health <= 0)
+        {
+            loader.Player1Win();
+        }
+        else
+        {
+            return;
+        }
 
+    }
 }
