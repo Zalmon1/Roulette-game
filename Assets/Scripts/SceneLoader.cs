@@ -9,6 +9,17 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("GameScene");
     }
 
+    public void Player1Win()
+    {
+        SceneManager.LoadScene("WinScene");
+    }
+
+    public void Player2Win()
+    {
+        SceneManager.LoadScene("LoseScene");
+    }
+
+
     public void Restart()
     {
         SceneManager.LoadScene("StartScene");

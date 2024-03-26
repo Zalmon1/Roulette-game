@@ -1,44 +1,140 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class RoundScript : MonoBehaviour
 {
-    [SerializeField] bool Player1Turn;
+    [SerializeField] bool friendlyTurn;
 
     [SerializeField] int player1Health;
     [SerializeField] int player2Health;
 
-    [SerializeField] float chanceToShoot;
+    [SerializeField] AudioClip emptyclip;
+    [SerializeField] AudioClip shoot;
+    [SerializeField] int chanceToShoot;
+
+
+    public Object arrow;
+    
+    SceneLoader loader;
 
     // Start is called before the first frame update
     void Start()
     {
-        chanceToShoot = Random.Range(1, 7);
-        player1Health = 5;
-        player2Health = 5;
-        Player1Turn = true;
+      
+        player1Health = 10;
+        player2Health = 10;
+
+        friendlyTurn = true;
+
+        arrow = GameObject.FindGameObjectWithTag("FriendArrow");
+        loader = gameObject.GetComponent<SceneLoader>();
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() //check if win or lose
     {
+        CheckPlayer1Health();
+        CheckPlayer2Health();
+
 
     }
 
-    public void Player1Shoot()
+
+
+    public void CheckTurn() //check whos turn it is to distribute dmg accordingly
     {
-        if (chanceToShoot == 1 && Player1Turn == true)
+        chanceToShoot = Random.Range(1, 7);
+
+        if (friendlyTurn) 
         {
-            player1Health--;
-            Debug.Log("Player1 hit");
-            Player1Turn = false;
+            ShootFunction();
         }
         else
         {
-            Debug.Log("Player1 missed");
-            Player1Turn = false;
+            EnemyShoot();
+        }
+    }
+    
+    public void ShootFunction() //friendlyshoot
+    {
+
+        
+       
+
+        if (chanceToShoot >= 5 && friendlyTurn == true)
+        {
+            AudioSource.PlayClipAtPoint(shoot, Camera.main.transform.position);
+            Debug.Log("player hit");
+            friendlyTurn = false;
+            player2Health--;
+        }
+        else if (friendlyTurn == true)
+        {
+            AudioSource.PlayClipAtPoint(emptyclip, Camera.main.transform.position);
+            Debug.Log("player missed");
+            friendlyTurn = false;
+        }
+        else
+        {
+            Debug.Log("Not player turn");
+            friendlyTurn = false;
+            return;
+        }
+
+
+    }
+
+    public void EnemyShoot() //oppshoot
+    {
+        if (chanceToShoot >= 5 && friendlyTurn == false)
+        {
+            AudioSource.PlayClipAtPoint(shoot, Camera.main.transform.position);
+            Debug.Log("enemy hit");
+            friendlyTurn = true;
+            player1Health--;
+            
+        }
+        else if (friendlyTurn == false)
+        {
+            AudioSource.PlayClipAtPoint(emptyclip, Camera.main.transform.position);
+            Debug.Log("enemy missed");
+            friendlyTurn = true;
+        }
+        else
+        {
+            Debug.Log("Not enemy turn");
+            friendlyTurn = true;
+            return;
         }
 
     }
- }
+
+    public void CheckPlayer1Health()
+    {
+        if (player1Health <= 0)
+        {
+            loader.Player2Win();
+        }
+        else
+        {
+            return;
+        }
+
+    }
+
+    public void CheckPlayer2Health()
+    {
+        if (player2Health <= 0)
+        {
+            loader.Player1Win();
+        }
+        else
+        {
+            return;
+        }
+
+    }
+}
