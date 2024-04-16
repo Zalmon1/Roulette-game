@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43832c1fb048e1a4c9ced406df341b79, type: 3}
   m_Name: ExtraHealth
   m_EditorClassIdentifier: 
+  myCardType: 2
   Deck: {fileID: 11400000, guid: ac22dee4e9184b340b61cc380b57e3e6, type: 2}
+  DmgScript: {fileID: 0}
   doubleDmg: 0
   helmet: 0
-  extraHealth: 28
+  extraHealth: 10
+  Value: 0
+  Card1: {fileID: 0}

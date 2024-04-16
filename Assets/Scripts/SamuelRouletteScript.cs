@@ -4,8 +4,16 @@ using UnityEngine;
 using System.Threading;
 using UnityEngine.UI;
 
+public enum PlayerType
+{
+    Player1,
+    Player2,
+    Total
+}
 public class SamuelRouletteScript : MonoBehaviour
 {
+    public CardScript PlayedCard = null;
+    public PlayerType MyPlayer = PlayerType.Player1;
     [SerializeField] int PlayerHealth;
     [SerializeField] int EnemyHealth;
     [SerializeField] bool Player1turn;
@@ -14,6 +22,7 @@ public class SamuelRouletteScript : MonoBehaviour
     
     public void PlayerTakeDamage()
     {
+  
         PlayerHealth--;
     }
 
@@ -21,7 +30,7 @@ public class SamuelRouletteScript : MonoBehaviour
     {
         EnemyHealth--;
     }
-
+   
     public void Player1Shoot()
     {
         float Player1ChanceToShoot = Random.Range(0f, 5f);
