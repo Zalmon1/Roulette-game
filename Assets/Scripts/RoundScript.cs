@@ -8,15 +8,12 @@ public class RoundScript : MonoBehaviour
 {
     [SerializeField] bool friendlyTurn;
 
-    [SerializeField] int player1Health;
-    [SerializeField] int player2Health;
+    [SerializeField] public int player1Health;
+    [SerializeField] public int player2Health;
 
     [SerializeField] AudioClip emptyclip;
     [SerializeField] AudioClip shoot;
     [SerializeField] int chanceToShoot;
-
-
-    public Object arrow;
     
     SceneLoader loader;
 
@@ -24,12 +21,11 @@ public class RoundScript : MonoBehaviour
     void Start()
     {
       
-        player1Health = 10;
-        player2Health = 10;
+        player1Health = 8;
+        player2Health = 8;
 
         friendlyTurn = true;
 
-        arrow = GameObject.FindGameObjectWithTag("FriendArrow");
         loader = gameObject.GetComponent<SceneLoader>();
     }
 
