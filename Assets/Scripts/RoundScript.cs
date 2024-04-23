@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class RoundScript : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class RoundScript : MonoBehaviour
     [SerializeField] int chanceToShoot;
     
     SceneLoader loader;
+
 
     // Start is called before the first frame update
     void Start()
