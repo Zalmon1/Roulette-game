@@ -15,6 +15,10 @@ public class RoundScript : MonoBehaviour
     [SerializeField] AudioClip emptyclip;
     [SerializeField] AudioClip shoot;
     [SerializeField] int chanceToShoot;
+
+    [SerializeField] float damageMultiplier = 2.0f;
+
+    float damageValuehAtStart;
     
     SceneLoader loader;
     public void SetActiveCard(CardScript aCard)
@@ -39,7 +43,6 @@ public class RoundScript : MonoBehaviour
         CheckPlayer1Health();
         CheckPlayer2Health();
 
-
     }
 
 
@@ -60,9 +63,6 @@ public class RoundScript : MonoBehaviour
     
     public void ShootFunction() //friendlyshoot
     {
-
-        
-       
 
         if (chanceToShoot >= 5 && friendlyTurn == true)
         {
