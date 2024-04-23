@@ -7,6 +7,7 @@ using Image = UnityEngine.UI.Image;
 
 public class RoundScript : MonoBehaviour
 {
+    public CardScript ActiveCard = null;
     [SerializeField] bool friendlyTurn;
 
     [SerializeField] public int player1Health;
@@ -15,10 +16,16 @@ public class RoundScript : MonoBehaviour
     [SerializeField] AudioClip emptyclip;
     [SerializeField] AudioClip shoot;
     [SerializeField] int chanceToShoot;
+
+    [SerializeField] float damageMultiplier = 2.0f;
+
+    float damageValuehAtStart;
     
     SceneLoader loader;
-
-
+    public void SetActiveCard(CardScript aCard)
+    {
+        ActiveCard = aCard;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +43,6 @@ public class RoundScript : MonoBehaviour
     {
         CheckPlayer1Health();
         CheckPlayer2Health();
-
 
     }
 
@@ -59,15 +65,12 @@ public class RoundScript : MonoBehaviour
     public void ShootFunction() //friendlyshoot
     {
 
-        
-       
-
         if (chanceToShoot >= 5 && friendlyTurn == true)
         {
             AudioSource.PlayClipAtPoint(shoot, Camera.main.transform.position);
             Debug.Log("player hit");
             friendlyTurn = false;
-            player2Health--;
+            DealDamageToEnemy();
         }
         else if (friendlyTurn == true)
         {
@@ -83,6 +86,20 @@ public class RoundScript : MonoBehaviour
         }
 
 
+    }
+
+    private void DealDamageToEnemy()
+    {
+        int dmgToDeal = 1;
+        if(ActiveCard != null)
+        {
+            if (ActiveCard.myCardType == CardType.DoubleDamage)
+            {
+                dmgToDeal *= 2;
+            }
+        }
+      
+        player2Health-= dmgToDeal;
     }
 
     public void EnemyShoot() //oppshoot
