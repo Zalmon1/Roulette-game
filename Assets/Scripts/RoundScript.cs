@@ -17,8 +17,6 @@ public class RoundScript : MonoBehaviour
     [SerializeField] int chanceToShoot;
 
     [SerializeField] float damageMultiplier = 2.0f;
-
-    float damageValuehAtStart;
     
     SceneLoader loader;
     public void SetActiveCard(CardScript aCard)
@@ -42,7 +40,6 @@ public class RoundScript : MonoBehaviour
     {
         CheckPlayer1Health();
         CheckPlayer2Health();
-
     }
 
 
@@ -87,18 +84,19 @@ public class RoundScript : MonoBehaviour
 
     }
 
-    private void DealDamageToEnemy()
+    private void DealDamageToEnemy() // Makes so that double dmg works ( in progress )
     {
-        int dmgToDeal = 1;
+        int damageMultiplier = 1;
         if(ActiveCard != null)
         {
+
             if (ActiveCard.myCardType == CardType.DoubleDamage)
             {
-                dmgToDeal *= 2;
+                damageMultiplier *= 2;
             }
         }
       
-        player2Health-= dmgToDeal;
+        player2Health-= damageMultiplier;
     }
 
     public void EnemyShoot() //oppshoot
