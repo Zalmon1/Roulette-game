@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 public class RoundScript : MonoBehaviour
 {
-    public CardScript ActiveCard = null;
-    [SerializeField] bool friendlyTurn;
+    public CardScript ActiveCard = null; 
+    [SerializeField] bool friendlyTurn; // turn checker
 
-    [SerializeField] public int player1Health;
-    [SerializeField] public int player2Health;
+    [SerializeField] public static int player1Health;
+    [SerializeField] public static int player2Health; 
 
-    [SerializeField] AudioClip emptyclip;
-    [SerializeField] AudioClip shoot;
-    [SerializeField] int chanceToShoot;
+    [SerializeField] AudioClip emptyclip; // audio to not shoot a bullet
+    [SerializeField] AudioClip shoot; // audio to shoot a bullet
+    [SerializeField] int chanceToShoot; // chance to shoot
 
     [SerializeField] float damageMultiplier = 2.0f;
-
-    float damageValuehAtStart;
     
     SceneLoader loader;
     public void SetActiveCard(CardScript aCard)
@@ -26,7 +25,7 @@ public class RoundScript : MonoBehaviour
         ActiveCard = aCard;
     }
     // Start is called before the first frame update
-    void Start()
+    void Start() // setting the health and turns, while also getting the sceneloader
     {
       
         player1Health = 8;
@@ -40,8 +39,8 @@ public class RoundScript : MonoBehaviour
     // Update is called once per frame
     void Update() //check if win or lose
     {
-        CheckPlayer1Health();
-        CheckPlayer2Health();
+        CheckPlayer1Health(); //check if player 1 health is below 1
+        CheckPlayer2Health(); //check if player 2 health is below 1
 
     }
 
@@ -53,11 +52,11 @@ public class RoundScript : MonoBehaviour
 
         if (friendlyTurn) 
         {
-            ShootFunction();
+            ShootFunction(); //calls the friendly shoot function
         }
         else
         {
-            EnemyShoot();
+            EnemyShoot(); // calls the enemy shoot function
         }
     }
     
@@ -87,18 +86,19 @@ public class RoundScript : MonoBehaviour
 
     }
 
-    private void DealDamageToEnemy()
+    private void DealDamageToEnemy() // Makes so that double dmg works ( in progress )
     {
-        int dmgToDeal = 1;
+        int damageMultiplier = 1;
         if(ActiveCard != null)
         {
+
             if (ActiveCard.myCardType == CardType.DoubleDamage)
             {
-                dmgToDeal *= 2;
+                damageMultiplier *= 2;
             }
         }
       
-        player2Health-= dmgToDeal;
+        player2Health-= damageMultiplier;
     }
 
     public void EnemyShoot() //oppshoot
