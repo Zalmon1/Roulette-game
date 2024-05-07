@@ -7,6 +7,7 @@ public class HealthScript : MonoBehaviour
 {
     [SerializeField] List<Sprite> allHeartsSprites;
     [SerializeField] Image currentImage;
+    [SerializeField] Image enemyImage;
     
     private int healthOfCharacter;
 
@@ -26,6 +27,9 @@ public class HealthScript : MonoBehaviour
 
     void Update()
     {
+        CheckHealthOfPlayer1();
+        CheckHealthOfPlayer2();
+
         trackHealthOfPlayer2 = RoundScript.player2Health;
         trackHealthOfPlayer1 = RoundScript.player1Health;
     }
@@ -41,6 +45,7 @@ public class HealthScript : MonoBehaviour
 
     public void CheckHealthOfPlayer1()
     {
+        // Debug.Log(trackHealthOfPlayer1);
         if (trackHealthOfPlayer1 ==  4)
         {
             currentImage.sprite = allHeartsSprites[0];
@@ -60,7 +65,22 @@ public class HealthScript : MonoBehaviour
     }
 
     public void CheckHealthOfPlayer2() 
-    { 
-    
+    {
+        if (trackHealthOfPlayer2 == 4)
+        {
+            enemyImage.sprite = allHeartsSprites[0];
+        }
+        else if (trackHealthOfPlayer2 == 3)
+        {
+            enemyImage.sprite = allHeartsSprites[1];
+        }
+        else if (trackHealthOfPlayer2 == 2)
+        {
+            enemyImage.sprite = allHeartsSprites[2];
+        }
+        else if (trackHealthOfPlayer2 == 1)
+        {
+            enemyImage.sprite = allHeartsSprites[3];
+        }
     }
 }

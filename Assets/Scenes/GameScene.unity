@@ -272,8 +272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActiveCard: {fileID: 0}
   friendlyTurn: 0
-  player1Health: 0
-  player2Health: 0
   emptyclip: {fileID: 8300000, guid: 964745c160757774d96a0d4727955792, type: 3}
   shoot: {fileID: 8300000, guid: b721e20096a049449893100e94400f95, type: 3}
   chanceToShoot: 0
@@ -451,7 +449,6 @@ GameObject:
   - component: {fileID: 309876867}
   - component: {fileID: 309876870}
   - component: {fileID: 309876869}
-  - component: {fileID: 309876871}
   m_Layer: 5
   m_Name: EnemyHealth
   m_TagString: Untagged
@@ -516,20 +513,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309876866}
   m_CullTransparentMesh: 1
---- !u!114 &309876871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309876866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7c52f3936f00794fb2b5b16d6fb53d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allHeartsSprites: []
-  currentImage: {fileID: 0}
 --- !u!1 &361211240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,10 +1269,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allHeartsSprites:
   - {fileID: -1275630047, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
-  - {fileID: 1982356713, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
   - {fileID: 393477158, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
+  - {fileID: 1982356713, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
   - {fileID: -93865004, guid: bd3646f79f1279046881b45deab0bd79, type: 3}
   currentImage: {fileID: 898640299}
+  enemyImage: {fileID: 309876869}
 --- !u!1 &928088340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,8 +1716,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActiveCard: {fileID: 0}
   friendlyTurn: 0
-  player1Health: 0
-  player2Health: 0
   emptyclip: {fileID: 0}
   shoot: {fileID: 0}
   chanceToShoot: 0

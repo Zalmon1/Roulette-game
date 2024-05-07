@@ -28,8 +28,8 @@ public class RoundScript : MonoBehaviour
     void Start() // setting the health and turns, while also getting the sceneloader
     {
       
-        player1Health = 8;
-        player2Health = 8;
+        player1Health = 4;
+        player2Health = 4;
 
         friendlyTurn = true;
 
