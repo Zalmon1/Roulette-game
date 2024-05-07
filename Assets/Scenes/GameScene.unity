@@ -298,7 +298,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5752299795390324504, guid: e43d74e9cec7d644da87a329a935dbd9, type: 3}
       propertyPath: m_Name
-      value: Player1111
+      value: Player2
       objectReference: {fileID: 0}
     - target: {fileID: 6853458264814880635, guid: e43d74e9cec7d644da87a329a935dbd9, type: 3}
       propertyPath: m_LocalScale.x
@@ -1173,7 +1173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3754627864151410219, guid: 9ab9217db3eed8a4d82f21ab9471d7a4, type: 3}
       propertyPath: m_Name
-      value: teehee
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 5114016700693583538, guid: 9ab9217db3eed8a4d82f21ab9471d7a4, type: 3}
       propertyPath: m_SortingOrder
@@ -1421,7 +1421,7 @@ Canvas:
   m_GameObject: {fileID: 1265688444}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1750039125}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
