@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
-using Image = UnityEngine.UI.Image;
 
 public class RoundScript : MonoBehaviour
 {
@@ -18,12 +13,16 @@ public class RoundScript : MonoBehaviour
     [SerializeField] int chanceToShoot;
 
     [SerializeField] float damageMultiplier = 2.0f;
-    
+
+    int damage;
+
     SceneLoader loader;
+
     public void SetActiveCard(CardScript aCard)
     {
         ActiveCard = aCard;
     }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,7 +66,10 @@ public class RoundScript : MonoBehaviour
             AudioSource.PlayClipAtPoint(shoot, Camera.main.transform.position);
             Debug.Log("player hit");
             friendlyTurn = false;
+            // deals dmg to player2
             DealDamageToEnemy();
+           
+
         }
         else if (friendlyTurn == true)
         {
@@ -86,7 +88,7 @@ public class RoundScript : MonoBehaviour
     }
 
     private void DealDamageToEnemy() // Makes so that double dmg works ( in progress )
-    {
+    {           
         int damageMultiplier = 1;
         if(ActiveCard != null)
         {
@@ -107,7 +109,9 @@ public class RoundScript : MonoBehaviour
             AudioSource.PlayClipAtPoint(shoot, Camera.main.transform.position);
             Debug.Log("enemy hit");
             friendlyTurn = true;
-            player1Health--;
+            //player1Health--;
+            damage = 1 * Mathf.RoundToInt(damageMultiplier);
+            player1Health -= damage;
             
         }
         else if (friendlyTurn == false)
