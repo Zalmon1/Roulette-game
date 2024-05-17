@@ -8,7 +8,7 @@ using Image = UnityEngine.UI.Image;
 public class RoundScript : MonoBehaviour
 {
     public CardScript ActiveCard = null; 
-    [SerializeField] bool friendlyTurn; // turn checker
+    [SerializeField] bool player1Turn; // turn checker
 
     [SerializeField] public static int player1Health;
     [SerializeField] public static int player2Health; 
@@ -31,7 +31,7 @@ public class RoundScript : MonoBehaviour
         player1Health = 4;
         player2Health = 4;
 
-        friendlyTurn = true;
+        player1Turn = true;
 
         loader = gameObject.GetComponent<SceneLoader>();
     }
@@ -50,7 +50,7 @@ public class RoundScript : MonoBehaviour
     {
         chanceToShoot = Random.Range(1, 7);
 
-        if (friendlyTurn) 
+        if (player1Turn) 
         {
             ShootFunction(); //calls the friendly shoot function
         }
@@ -63,23 +63,23 @@ public class RoundScript : MonoBehaviour
     public void ShootFunction() //friendlyshoot
     {
 
-        if (chanceToShoot >= 5 && friendlyTurn == true)
+        if (chanceToShoot >= 5 && player1Turn == true)
         {
             AudioSource.PlayClipAtPoint(shoot, Camera.main.transform.position);
             Debug.Log("player hit");
-            friendlyTurn = false;
+            player1Turn = false;
             DealDamageToEnemy();
         }
-        else if (friendlyTurn == true)
+        else if (player1Turn == true)
         {
             AudioSource.PlayClipAtPoint(emptyclip, Camera.main.transform.position);
             Debug.Log("player missed");
-            friendlyTurn = false;
+            player1Turn = false;
         }
         else
         {
             Debug.Log("Not player turn");
-            friendlyTurn = false;
+            player1Turn = false;
             return;
         }
 
@@ -103,24 +103,24 @@ public class RoundScript : MonoBehaviour
 
     public void EnemyShoot() //oppshoot
     {
-        if (chanceToShoot >= 5 && friendlyTurn == false)
+        if (chanceToShoot >= 5 && player1Turn == false)
         {
             AudioSource.PlayClipAtPoint(shoot, Camera.main.transform.position);
             Debug.Log("enemy hit");
-            friendlyTurn = true;
+            player1Turn = true;
             player1Health--;
             
         }
-        else if (friendlyTurn == false)
+        else if (player1Turn == false)
         {
             AudioSource.PlayClipAtPoint(emptyclip, Camera.main.transform.position);
             Debug.Log("enemy missed");
-            friendlyTurn = true;
+            player1Turn = true;
         }
         else
         {
             Debug.Log("Not enemy turn");
-            friendlyTurn = true;
+            player1Turn = true;
             return;
         }
 
